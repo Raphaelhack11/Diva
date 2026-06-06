@@ -46,8 +46,8 @@ object-fit: cover;
 }
 
 /* ── SCREENS ── */
-.screen { display: none; }
-.screen.active { display: block; }
+.screen { display: none; background: var(–black); }
+.screen.active { display: block; background: var(–black); }
 
 /* ── BOOKING FORM ── */
 .booking-wrap {
@@ -405,9 +405,10 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-min-height: 60vh;
+min-height: 80vh;
 padding: 48px 24px;
 text-align: center;
+background: var(–black);
 }
 .spinner {
 width: 60px; height: 60px;
@@ -453,11 +454,12 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-min-height: 60vh;
+min-height: 80vh;
 padding: 48px 24px;
 text-align: center;
 position: relative;
 overflow: hidden;
+background: var(–black);
 }
 .thankyou-icon {
 width: 72px; height: 72px;
@@ -597,8 +599,8 @@ animation: confettiFall 3.5s ease-in forwards;
     <label>Service ID</label>
     <input type="text" id="fServiceId" placeholder="Enter your service code" maxlength="20" oninput="checkServiceId()"/>
     <div class="service-reveal" id="serviceReveal">
-      <span class="service-name">Anjail:Quick Weave</span>
-      <span class="service-amount">75$</span>
+      <span class="service-name">Quick Weave</span>
+      <span class="service-amount">$75</span>
     </div>
   </div>
 
@@ -760,9 +762,9 @@ animation: confettiFall 3.5s ease-in forwards;
     document.getElementById('summaryName').textContent = name;
     const d = new Date(date + 'T00:00:00');
     document.getElementById('summaryDate').textContent = d.toLocaleDateString('en-US', { weekday:'long', year:'numeric', month:'long', day:'numeric' });
-    document.getElementById('summaryService').textContent = 'Diva';
-    document.getElementById('summaryAmount').textContent = '$250';
-    document.getElementById('cryptoAmountDisplay').textContent = '$250';
+    document.getElementById('summaryService').textContent = 'Quick Weave';
+    document.getElementById('summaryAmount').textContent = '$75';
+    document.getElementById('cryptoAmountDisplay').textContent = '$75';
 
     showScreen('screenCheckout');
   }
