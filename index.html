@@ -11,7 +11,7 @@
     --black:       #0d0d0d;
     --dark:        #141414;
     --dark-card:   #1c1c1c;
-    --dark-border: #2a2a2a;
+    --dark-border: #383838;
     --pink:        #e8588a;
     --pink-light:  #f493b8;
     --pink-pale:   #3a1a26;
@@ -19,7 +19,7 @@
     --gold-light:  #e2c47a;
     --white:       #ffffff;
     --off-white:   #f0f0f0;
-    --text-muted:  #aaaaaa;
+    --text-muted:  #bbbbbb;
   }
 
 - { margin:0; padding:0; box-sizing:border-box; }
@@ -116,19 +116,20 @@ padding-right: 36px;
 /* service reveal */
 .service-reveal {
 display: none;
-background: linear-gradient(135deg, #1e0e14, #2a1220);
-border: 1px solid var(–pink);
+background: linear-gradient(135deg, #3d1428, #4e1a33);
+border: 1.5px solid var(–pink);
 border-radius: 12px;
 padding: 18px 22px;
 margin-top: 4px;
 animation: fadeSlideIn 0.35s ease;
+box-shadow: 0 4px 20px rgba(232,88,138,0.2);
 }
 .service-reveal.show { display: flex; align-items: center; justify-content: space-between; }
 .service-name {
 font-family: ‘Cormorant Garamond’, serif;
 font-size: 1.5rem;
 font-weight: 600;
-color: var(–pink-light);
+color: #ffffff;
 font-style: italic;
 }
 .service-amount {
@@ -277,15 +278,15 @@ font-size: 0.85rem; font-weight: 700; color: white;
 display: flex;
 align-items: center;
 gap: 8px;
-background: #111;
-border: 1px solid var(–dark-border);
+background: #282828;
+border: 1px solid #454545;
 border-radius: 8px;
 padding: 10px 12px;
 }
 .wallet-addr {
 flex: 1;
 font-size: 0.72rem;
-color: var(–text-muted);
+color: #cccccc;
 word-break: break-all;
 font-family: ‘Courier New’, monospace;
 }
@@ -307,12 +308,12 @@ transition: background 0.2s;
 
 .crypto-instruction {
 margin-top: 14px;
-font-size: 0.83rem;
-color: var(–text-muted);
-line-height: 1.6;
-background: #1a1208;
+font-size: 0.85rem;
+color: #dddddd;
+line-height: 1.7;
+background: #2a2008;
 border-left: 3px solid var(–gold);
-padding: 12px 14px;
+padding: 14px 16px;
 border-radius: 0 8px 8px 0;
 }
 .crypto-amount-highlight {
