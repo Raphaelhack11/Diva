@@ -8,23 +8,26 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <style>
   :root {
-    --purple-deep: #3b1f5e;
-    --purple-mid: #6b3fa0;
-    --purple-light: #a574d4;
-    --purple-pale: #e8d8f8;
-    --gold: #c8a96e;
-    --white: #ffffff;
-    --off-white: #faf8fd;
-    --text-dark: #1e0a3c;
-    --shadow: 0 8px 40px rgba(59,31,94,0.13);
+    --black:       #0d0d0d;
+    --dark:        #141414;
+    --dark-card:   #1c1c1c;
+    --dark-border: #2a2a2a;
+    --pink:        #e8588a;
+    --pink-light:  #f493b8;
+    --pink-pale:   #3a1a26;
+    --gold:        #c9a84c;
+    --gold-light:  #e2c47a;
+    --white:       #ffffff;
+    --off-white:   #f0f0f0;
+    --text-muted:  #aaaaaa;
   }
 
 - { margin:0; padding:0; box-sizing:border-box; }
 
 body {
 font-family: ‘Jost’, sans-serif;
-background: var(–white);
-color: var(–text-dark);
+background: var(–black);
+color: var(–white);
 min-height: 100vh;
 }
 
@@ -56,7 +59,7 @@ padding: 48px 24px 80px;
 font-size: 0.7rem;
 letter-spacing: 0.3em;
 text-transform: uppercase;
-color: var(–purple-light);
+color: var(–gold);
 margin-bottom: 28px;
 display: flex;
 align-items: center;
@@ -66,7 +69,7 @@ gap: 12px;
 content: ‘’;
 flex: 1;
 height: 1px;
-background: var(–purple-pale);
+background: var(–dark-border);
 }
 
 .form-grid {
@@ -82,35 +85,39 @@ font-size: 0.72rem;
 font-weight: 500;
 letter-spacing: 0.15em;
 text-transform: uppercase;
-color: var(–purple-mid);
+color: var(–pink-light);
 }
 .field input, .field select {
 padding: 13px 16px;
-border: 1.5px solid var(–purple-pale);
+border: 1.5px solid var(–dark-border);
 border-radius: 10px;
 font-family: ‘Jost’, sans-serif;
 font-size: 0.95rem;
-color: var(–text-dark);
-background: var(–white);
+color: var(–white);
+background: var(–dark-card);
 outline: none;
 transition: border-color 0.25s, box-shadow 0.25s;
 }
+.field input::placeholder { color: #555; }
 .field input:focus, .field select:focus {
-border-color: var(–purple-mid);
-box-shadow: 0 0 0 3px rgba(107,63,160,0.1);
+border-color: var(–pink);
+box-shadow: 0 0 0 3px rgba(232,88,138,0.12);
 }
-.field select { cursor: pointer; appearance: none;
-background-image: url(“data:image/svg+xml,%3Csvg xmlns=‘http://www.w3.org/2000/svg’ width=‘12’ height=‘8’ viewBox=‘0 0 12 8’%3E%3Cpath d=‘M1 1l5 5 5-5’ stroke=’%236b3fa0’ stroke-width=‘1.5’ fill=‘none’ stroke-linecap=‘round’/%3E%3C/svg%3E”);
+.field select {
+cursor: pointer;
+appearance: none;
+background-image: url(“data:image/svg+xml,%3Csvg xmlns=‘http://www.w3.org/2000/svg’ width=‘12’ height=‘8’ viewBox=‘0 0 12 8’%3E%3Cpath d=‘M1 1l5 5 5-5’ stroke=’%23e8588a’ stroke-width=‘1.5’ fill=‘none’ stroke-linecap=‘round’/%3E%3C/svg%3E”);
 background-repeat: no-repeat;
 background-position: right 14px center;
 padding-right: 36px;
 }
+.field select option { background: var(–dark-card); color: var(–white); }
 
 /* service reveal */
 .service-reveal {
 display: none;
-background: linear-gradient(135deg, var(–purple-pale), #f5eeff);
-border: 1px solid var(–purple-light);
+background: linear-gradient(135deg, #1e0e14, #2a1220);
+border: 1px solid var(–pink);
 border-radius: 12px;
 padding: 18px 22px;
 margin-top: 4px;
@@ -121,7 +128,7 @@ animation: fadeSlideIn 0.35s ease;
 font-family: ‘Cormorant Garamond’, serif;
 font-size: 1.5rem;
 font-weight: 600;
-color: var(–purple-deep);
+color: var(–pink-light);
 font-style: italic;
 }
 .service-amount {
@@ -140,22 +147,22 @@ to   { opacity:1; transform: translateY(0); }
 margin-top: 36px;
 width: 100%;
 padding: 17px;
-background: linear-gradient(135deg, var(–purple-deep), var(–purple-mid));
+background: linear-gradient(135deg, var(–pink), #c0406e);
 color: var(–white);
 font-family: ‘Jost’, sans-serif;
 font-size: 0.85rem;
-font-weight: 500;
+font-weight: 600;
 letter-spacing: 0.3em;
 text-transform: uppercase;
 border: none;
 border-radius: 12px;
 cursor: pointer;
 transition: transform 0.2s, box-shadow 0.2s;
-box-shadow: 0 6px 24px rgba(59,31,94,0.28);
+box-shadow: 0 6px 24px rgba(232,88,138,0.35);
 }
 .btn-proceed:hover {
 transform: translateY(-2px);
-box-shadow: 0 10px 32px rgba(59,31,94,0.38);
+box-shadow: 0 10px 32px rgba(232,88,138,0.5);
 }
 .btn-proceed:active { transform: translateY(0); }
 
@@ -173,19 +180,19 @@ margin-bottom: 40px;
 font-family: ‘Cormorant Garamond’, serif;
 font-size: 2.4rem;
 font-weight: 300;
-color: var(–purple-deep);
+color: var(–gold);
 }
 .checkout-header p {
 font-size: 0.82rem;
 letter-spacing: 0.2em;
 text-transform: uppercase;
-color: var(–purple-light);
+color: var(–text-muted);
 margin-top: 6px;
 }
 
 .order-card {
-background: linear-gradient(135deg, #f9f3ff, #f0e6ff);
-border: 1px solid var(–purple-pale);
+background: var(–dark-card);
+border: 1px solid var(–dark-border);
 border-radius: 16px;
 padding: 24px;
 margin-bottom: 28px;
@@ -194,20 +201,20 @@ margin-bottom: 28px;
 display: flex;
 justify-content: space-between;
 align-items: center;
-padding: 8px 0;
-border-bottom: 1px dashed rgba(107,63,160,0.15);
+padding: 10px 0;
+border-bottom: 1px solid var(–dark-border);
 }
 .order-row:last-child { border-bottom: none; }
-.order-row .label { font-size: 0.78rem; color: var(–purple-mid); text-transform: uppercase; letter-spacing: 0.12em; }
-.order-row .value { font-size: 0.95rem; color: var(–text-dark); font-weight: 500; }
-.order-row.total .label { font-size: 0.82rem; color: var(–purple-deep); font-weight: 600; }
+.order-row .label { font-size: 0.78rem; color: var(–text-muted); text-transform: uppercase; letter-spacing: 0.12em; }
+.order-row .value { font-size: 0.95rem; color: var(–white); font-weight: 500; }
+.order-row.total .label { font-size: 0.82rem; color: var(–pink-light); font-weight: 600; }
 .order-row.total .value { font-size: 1.2rem; color: var(–gold); font-weight: 600; }
 
 .payment-section h3 {
 font-size: 0.75rem;
 letter-spacing: 0.28em;
 text-transform: uppercase;
-color: var(–purple-mid);
+color: var(–gold);
 margin-bottom: 14px;
 }
 
@@ -215,22 +222,23 @@ margin-bottom: 14px;
 .payment-select-wrap select {
 width: 100%;
 padding: 15px 16px;
-border: 1.5px solid var(–purple-pale);
+border: 1.5px solid var(–dark-border);
 border-radius: 12px;
 font-family: ‘Jost’, sans-serif;
 font-size: 1rem;
-color: var(–text-dark);
-background: var(–white);
+color: var(–white);
+background: var(–dark-card);
 outline: none;
 cursor: pointer;
 appearance: none;
-background-image: url(“data:image/svg+xml,%3Csvg xmlns=‘http://www.w3.org/2000/svg’ width=‘12’ height=‘8’ viewBox=‘0 0 12 8’%3E%3Cpath d=‘M1 1l5 5 5-5’ stroke=’%236b3fa0’ stroke-width=‘1.5’ fill=‘none’ stroke-linecap=‘round’/%3E%3C/svg%3E”);
+background-image: url(“data:image/svg+xml,%3Csvg xmlns=‘http://www.w3.org/2000/svg’ width=‘12’ height=‘8’ viewBox=‘0 0 12 8’%3E%3Cpath d=‘M1 1l5 5 5-5’ stroke=’%23e8588a’ stroke-width=‘1.5’ fill=‘none’ stroke-linecap=‘round’/%3E%3C/svg%3E”);
 background-repeat: no-repeat;
 background-position: right 14px center;
 padding-right: 36px;
 transition: border-color 0.25s;
 }
-.payment-select-wrap select:focus { border-color: var(–purple-mid); }
+.payment-select-wrap select:focus { border-color: var(–pink); }
+.payment-select-wrap select option { background: var(–dark-card); }
 
 /* Crypto panel */
 .crypto-panel {
@@ -241,14 +249,14 @@ animation: fadeSlideIn 0.35s ease;
 .crypto-panel.show { display: block; }
 
 .crypto-option {
-background: var(–off-white);
-border: 1.5px solid var(–purple-pale);
+background: var(–dark-card);
+border: 1.5px solid var(–dark-border);
 border-radius: 14px;
 padding: 18px 20px;
 margin-bottom: 14px;
 transition: border-color 0.2s;
 }
-.crypto-option:hover { border-color: var(–purple-light); }
+.crypto-option:hover { border-color: var(–pink); }
 .crypto-coin {
 display: flex;
 align-items: center;
@@ -263,47 +271,47 @@ font-size: 0.85rem; font-weight: 700; color: white;
 }
 .coin-icon.btc { background: linear-gradient(135deg, #f7931a, #e8820a); }
 .coin-icon.eth { background: linear-gradient(135deg, #627eea, #3c5dd4); }
-.coin-name { font-weight: 600; font-size: 0.95rem; color: var(–purple-deep); }
+.coin-name { font-weight: 600; font-size: 0.95rem; color: var(–gold-light); }
 
 .wallet-row {
 display: flex;
 align-items: center;
 gap: 8px;
-background: white;
-border: 1px solid var(–purple-pale);
+background: #111;
+border: 1px solid var(–dark-border);
 border-radius: 8px;
 padding: 10px 12px;
 }
 .wallet-addr {
 flex: 1;
 font-size: 0.72rem;
-color: var(–purple-mid);
+color: var(–text-muted);
 word-break: break-all;
 font-family: ‘Courier New’, monospace;
 }
 .btn-copy {
 flex-shrink: 0;
 padding: 5px 12px;
-background: var(–purple-pale);
-border: 1px solid var(–purple-light);
+background: #222;
+border: 1px solid var(–dark-border);
 border-radius: 6px;
 font-family: ‘Jost’, sans-serif;
 font-size: 0.72rem;
 font-weight: 500;
-color: var(–purple-mid);
+color: var(–pink-light);
 cursor: pointer;
 transition: background 0.2s;
 }
-.btn-copy:hover { background: var(–purple-light); color: white; }
-.btn-copy.copied { background: #4caf50; color: white; border-color: #4caf50; }
+.btn-copy:hover { background: var(–pink); color: white; border-color: var(–pink); }
+.btn-copy.copied { background: #2a7a2a; color: white; border-color: #2a7a2a; }
 
 .crypto-instruction {
 margin-top: 14px;
 font-size: 0.83rem;
-color: var(–purple-mid);
+color: var(–text-muted);
 line-height: 1.6;
-background: #f9f3ff;
-border-left: 3px solid var(–purple-light);
+background: #1a1208;
+border-left: 3px solid var(–gold);
 padding: 12px 14px;
 border-radius: 0 8px 8px 0;
 }
@@ -317,26 +325,26 @@ font-size: 1rem;
 margin-top: 24px;
 width: 100%;
 padding: 16px;
-background: linear-gradient(135deg, var(–purple-deep), var(–purple-mid));
+background: linear-gradient(135deg, var(–pink), #c0406e);
 color: var(–white);
 font-family: ‘Jost’, sans-serif;
 font-size: 0.85rem;
-font-weight: 500;
+font-weight: 600;
 letter-spacing: 0.3em;
 text-transform: uppercase;
 border: none;
 border-radius: 12px;
 cursor: pointer;
-box-shadow: 0 6px 24px rgba(59,31,94,0.28);
+box-shadow: 0 6px 24px rgba(232,88,138,0.35);
 transition: transform 0.2s, box-shadow 0.2s;
 }
-.btn-sent:hover { transform: translateY(-2px); box-shadow: 0 10px 32px rgba(59,31,94,0.38); }
+.btn-sent:hover { transform: translateY(-2px); box-shadow: 0 10px 32px rgba(232,88,138,0.5); }
 
 /* ── SERVICE ERROR MODAL ── */
 .modal-overlay {
 display: none;
 position: fixed; inset: 0;
-background: rgba(20,5,40,0.6);
+background: rgba(0,0,0,0.75);
 backdrop-filter: blur(4px);
 z-index: 100;
 align-items: center;
@@ -344,13 +352,14 @@ justify-content: center;
 }
 .modal-overlay.show { display: flex; }
 .modal-box {
-background: var(–white);
+background: var(–dark-card);
+border: 1px solid var(–dark-border);
 border-radius: 20px;
 padding: 40px 36px;
 text-align: center;
 max-width: 360px;
 width: 90%;
-box-shadow: 0 24px 64px rgba(59,31,94,0.3);
+box-shadow: 0 24px 64px rgba(0,0,0,0.6);
 animation: modalPop 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 @keyframes modalPop {
@@ -359,8 +368,8 @@ to   { opacity:1; transform: scale(1); }
 }
 .modal-icon {
 width: 56px; height: 56px;
-background: #fff0f0;
-border: 2px solid #ff6b6b;
+background: #2a0e0e;
+border: 2px solid #c0392b;
 border-radius: 50%;
 display: flex; align-items: center; justify-content: center;
 margin: 0 auto 18px;
@@ -369,14 +378,14 @@ font-size: 1.5rem;
 .modal-title {
 font-family: ‘Cormorant Garamond’, serif;
 font-size: 1.5rem;
-color: #c0392b;
+color: #e05252;
 margin-bottom: 10px;
 }
-.modal-msg { font-size: 0.88rem; color: #666; line-height: 1.6; }
+.modal-msg { font-size: 0.88rem; color: var(–text-muted); line-height: 1.6; }
 .btn-modal-close {
 margin-top: 24px;
 padding: 11px 32px;
-background: var(–purple-deep);
+background: var(–pink);
 color: white;
 border: none;
 border-radius: 8px;
@@ -387,7 +396,7 @@ text-transform: uppercase;
 cursor: pointer;
 transition: background 0.2s;
 }
-.btn-modal-close:hover { background: var(–purple-mid); }
+.btn-modal-close:hover { background: #c0406e; }
 
 /* ── VERIFYING SCREEN ── */
 .verifying-wrap {
@@ -401,8 +410,8 @@ text-align: center;
 }
 .spinner {
 width: 60px; height: 60px;
-border: 3px solid var(–purple-pale);
-border-top-color: var(–purple-mid);
+border: 3px solid var(–dark-border);
+border-top-color: var(–pink);
 border-radius: 50%;
 animation: spin 0.9s linear infinite;
 margin-bottom: 28px;
@@ -412,19 +421,19 @@ margin-bottom: 28px;
 font-family: ‘Cormorant Garamond’, serif;
 font-size: 1.8rem;
 font-weight: 300;
-color: var(–purple-deep);
+color: var(–gold);
 }
 .verifying-sub {
 font-size: 0.8rem;
 letter-spacing: 0.2em;
 text-transform: uppercase;
-color: var(–purple-light);
+color: var(–text-muted);
 margin-top: 8px;
 }
 .verifying-bar-wrap {
 width: 220px;
 height: 3px;
-background: var(–purple-pale);
+background: var(–dark-border);
 border-radius: 2px;
 margin-top: 28px;
 overflow: hidden;
@@ -432,7 +441,7 @@ overflow: hidden;
 .verifying-bar {
 height: 100%;
 width: 0%;
-background: linear-gradient(90deg, var(–purple-mid), var(–purple-light));
+background: linear-gradient(90deg, var(–pink), var(–gold));
 border-radius: 2px;
 transition: width 0.1s linear;
 }
@@ -451,12 +460,12 @@ overflow: hidden;
 }
 .thankyou-icon {
 width: 72px; height: 72px;
-background: linear-gradient(135deg, var(–purple-mid), var(–purple-light));
+background: linear-gradient(135deg, var(–pink), #c0406e);
 border-radius: 50%;
 display: flex; align-items: center; justify-content: center;
 font-size: 2rem;
 margin-bottom: 24px;
-box-shadow: 0 8px 32px rgba(107,63,160,0.35);
+box-shadow: 0 8px 32px rgba(232,88,138,0.4);
 animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 @keyframes popIn {
@@ -467,17 +476,18 @@ to   { transform: scale(1); }
 font-family: ‘Cormorant Garamond’, serif;
 font-size: clamp(2rem, 6vw, 3.2rem);
 font-weight: 300;
-color: var(–purple-deep);
+color: var(–white);
 line-height: 1.15;
 }
 .thankyou-heading em { color: var(–gold); font-style: italic; }
 .thankyou-sub {
 margin-top: 14px;
 font-size: 0.92rem;
-color: var(–purple-light);
+color: var(–text-muted);
 line-height: 1.7;
 max-width: 400px;
 }
+.thankyou-sub strong { color: var(–pink-light); }
 .thankyou-divider {
 width: 50px; height: 1px;
 background: var(–gold);
@@ -814,7 +824,7 @@ animation: confettiFall 3.5s ease-in forwards;
   function launchConfetti() {
     const container = document.getElementById('confettiContainer');
     container.innerHTML = '';
-    const colors = ['#6b3fa0','#a574d4','#c8a96e','#e8d8f8','#3b1f5e','#ffffff','#f0c040'];
+    const colors = ['#e8588a','#f493b8','#c9a84c','#e2c47a','#ffffff','#ff85aa','#ffd700'];
     for (let i = 0; i < 120; i++) {
       const p = document.createElement('div');
       p.className = 'confetti-piece';
