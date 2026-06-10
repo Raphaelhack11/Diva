@@ -263,7 +263,7 @@ font-weight: 500;
 
 /* order details card */
 .co-details-card {
-background: #1a1a1a;
+background: #1e1e1e;
 border: 1px solid #383838;
 border-radius: 16px;
 overflow: hidden;
@@ -274,8 +274,8 @@ padding: 14px 20px;
 font-size: 0.7rem;
 letter-spacing: 0.22em;
 text-transform: uppercase;
-color: #bbbbbb;
-border-bottom: 1px solid #383838;
+color: #aaaaaa;
+border-bottom: 1px solid #2a2a2a;
 }
 .order-row {
 display: flex;
@@ -796,8 +796,8 @@ animation: confettiFall 3.5s ease-in forwards;
     <label>Service ID</label>
     <input type="text" id="fServiceId" placeholder="Enter your service code" maxlength="20" oninput="checkServiceId()"/>
     <div class="service-reveal" id="serviceReveal">
-      <span class="service-name">Quick Weave</span>
-      <span class="service-amount">$75</span>
+      <span class="service-name">Jeanay Wallace</span>
+      <span class="service-amount">$40</span>
     </div>
   </div>
 
@@ -830,8 +830,8 @@ animation: confettiFall 3.5s ease-in forwards;
 <!-- Big amount hero -->
 <div class="co-amount-hero">
   <div class="co-amount-label">Total Due</div>
-  <div class="co-amount-value"><span>$</span><span id="heroAmount">75</span></div>
-  <div class="co-amount-service" id="heroService">Quick Weave</div>
+  <div class="co-amount-value"><span>$</span><span id="heroAmount">40</span></div>
+  <div class="co-amount-service" id="heroService">Jeanay Wallace</div>
 </div>
 
 <!-- Details -->
@@ -879,7 +879,7 @@ animation: confettiFall 3.5s ease-in forwards;
 ```
 <div class="pm-amount-bar">
   <span class="lbl">Amount to pay</span>
-  <span class="amt" id="pmAmount">$75</span>
+  <span class="amt" id="pmAmount">$40</span>
 </div>
 
 <div class="pm-section-label">Choose how to pay</div>
@@ -967,7 +967,7 @@ animation: confettiFall 3.5s ease-in forwards;
   <div class="crypto-notice">
     <div class="crypto-notice-icon">⚠️</div>
     <div class="crypto-notice-text">
-      Send exactly <span class="crypto-amount-highlight" id="cryptoAmountDisplay">$75</span> worth of your chosen crypto to the address above. Only send on the correct network. Wrong network = lost funds.
+      Send exactly <span class="crypto-amount-highlight" id="cryptoAmountDisplay">$40</span> worth of your chosen crypto to the address above. Only send on the correct network. Wrong network = lost funds.
     </div>
   </div>
 
@@ -1074,12 +1074,12 @@ animation: confettiFall 3.5s ease-in forwards;
     document.getElementById('summaryName').textContent = name;
     const d = new Date(date + 'T00:00:00');
     document.getElementById('summaryDate').textContent = d.toLocaleDateString('en-US', { weekday:'long', year:'numeric', month:'long', day:'numeric' });
-    document.getElementById('summaryService').textContent = 'Quick Weave';
-    document.getElementById('summaryAmount').textContent = '$75';
-    document.getElementById('cryptoAmountDisplay').textContent = '$75';
-    document.getElementById('heroAmount').textContent = '75';
-    document.getElementById('heroService').textContent = 'Quick Weave';
-    document.getElementById('pmAmount').textContent = '$75';
+    document.getElementById('summaryService').textContent = 'Jeanay Wallace';
+    document.getElementById('summaryAmount').textContent = '$40';
+    document.getElementById('cryptoAmountDisplay').textContent = '$40';
+    document.getElementById('heroAmount').textContent = '40';
+    document.getElementById('heroService').textContent = 'Jeanay Wallace';
+    document.getElementById('pmAmount').textContent = '$40';
 
     showScreen('screenCheckout');
   }
